@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("galaxy2.jpg");
+    animation: animateBackground 40s linear infinite;
+  }
+
+  @keyframes animateBackground {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  .container {
+    max-width: 800px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .card {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.325);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow elements to wrap to the next line */
+  }
+
+  .planet-info {
+    flex: 1 0 100%; /* Full width initially, shrink to wrap content */
+  }
+
+  .planet-image {
+    flex: 0 0 150px;
+    margin-right: 20px;
+    position: relative;
+  }
+
+  .planet-image img {
+    width: 40%;
+    height: 40%; /* Set height to 40% */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+ /* .shiny-outline {
+    position: absolute;
+    top: 3px;
+    
+    left: 195px; 
+    width: 45%; 
+    height: 105%; 
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(45, 17, 101, 0.7),
+      0 0 30px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.7),
+      0 0 60px rgba(255, 255, 255, 0.7), 0 0 80px rgba(255, 255, 255, 0.7);
+    animation: shinyAnimation 3s infinite linear;
+    z-index: -1; 
+  }*/
+
+  @keyframes shinyAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .planet-details {
+    max-width: 100%;
+    display: none;
+    margin-top: 20px; /* Add space between planet image and details */
+  }
+
+  .planet-full-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Align text to the left */
+    z-index: 1; /* Ensure it's above other content */
+  }
+  h1 {
+    color: white;
+  }
+  h2 {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .planet-info:hover .planet-details {
+    display: block;
+  }
+  .planet-image img {
+    width: 50%;
+    height: 40%; /* Set height to 40% */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    animation: rotatePlanet 10s linear infinite; /* Apply animation */
+  }
+  
+  @keyframes rotatePlanet {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
